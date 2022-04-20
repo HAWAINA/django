@@ -1,4 +1,4 @@
-#!/home/ismet/Documents/django_hw/venv/bin/python3
+#!/home/dilyar/Документы/MyProjects/Python/django_app_hw/venv/bin/python3
 # -*- coding: utf-8 -*-
 import re
 import sys

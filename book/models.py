@@ -3,11 +3,11 @@ from django.db import models
 
 class Book(models.Model):
     title = models.CharField(max_length=50)
+    image = models.ImageField(upload_to="")
+    author = models.CharField(max_length=70, default='')
+    create_date = models.DateField(auto_now_add=True)
+    update_date = models.DateField(auto_now=True)
     description = models.TextField()
-    created_date = models.DateField(auto_now_add=True)
-    updated_date = models.DateField(auto_now=True)
-    image = models.ImageField(upload_to='')
-    author = models.CharField(max_length=30)
 
     def __str__(self):
         return self.title
@@ -34,9 +34,7 @@ class Author(models.Model):
     date_birth = models.TextField()
     story = models.TextField()
     gender = models.CharField(max_length=20, choices=GENDER)
-    author = models.ForeignKey(Book,
-                               on_delete=models.CASCADE,
-                               related_name="book_author")
+    author = models.ForeignKey(Book, on_delete=models.CASCADE, related_name="book_author")
 
     def __str__(self):
         return self.book.author

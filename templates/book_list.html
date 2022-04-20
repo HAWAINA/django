@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>books</title>
-    <link rel="stylesheet" href="../static/css/style.css">
-</head>
-<body>
-<div class="container">
-    <ul>
-        {% for book in books %}
-        <li>
-            <h2><a href="{{ book.id }}">{{ book.title }}</a></h2>
-            <div class="img">
-                <img src="{{ book.image.url }}" alt="">
-            </div>
-            <p>Автор: {{ book.author }}</p>
-        </li>
-        {% endfor %}
-    </ul>
-</div>
-</body>
+  <head>
+      <meta charset="UTF-8">
+      <title>books</title>
+      <link rel="stylesheet" href="../static/css/style.css">
+  </head>
+  <body>
+    <div class="container">
+        <ul>
+            {% for book in books %}
+            <li>
+                <h2><a href="{{ book.id }}">{{ book.title }}</a></h2>
+                <div class="img">
+                    <img src="{{ book.image.url }}" alt="">
+                </div>
+                <p>Автор: <a href="{{ book.author }}">{{ book.author }}</a></p>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+  </body>
 </html>
