@@ -34,7 +34,9 @@ class Author(models.Model):
     date_birth = models.TextField()
     story = models.TextField()
     gender = models.CharField(max_length=20, choices=GENDER)
-    author = models.ForeignKey(Book, on_delete=models.CASCADE, related_name="book_author")
+    author = models.ForeignKey(Book,
+                               on_delete=models.CASCADE,
+                               related_name="book_author")
 
     def __str__(self):
         return self.book.author

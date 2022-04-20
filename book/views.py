@@ -4,7 +4,7 @@ from . import models
 
 def book_all(request):
     book = models.Book.objects.all()
-    return render(request, "figma.html", {"book": book})
+    return render(request, "book_list.html", {"book": book})
 
 
 def book_detail(request, id):
