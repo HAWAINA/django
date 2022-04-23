@@ -1,14 +1,58 @@
-.container {
-    width: 1290px;
-    margin: 0 auto;
+body {
+  margin: 0;
+  font-family: "Titillium Web";
+  background: #2c323c;
 }
-h2 {
-    font-size: 40px;
+body .wrapper {
+  max-width: 1110px;
+  margin: 0 auto;
+  padding: 10px;
 }
-.img {
+body .wrapper .main {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+body .wrapper .main .bookItem {
+  flex: 0 0 200px;
+  background: #344968;
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  color: #fff;
+}
+body .wrapper .main .bookItem h1 {
+  margin: 0 0 10px;
+}
+body .wrapper .main .bookItem h1 a {
+  font-size: 30px;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+}
+body .wrapper .main .bookItem img {
+  width: 170px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  background: rgb(0, 0, 0);
+  transition: all 0.5s;
+}
+body .wrapper .main .bookItem img:hover {
+  background: none;
+  transform: scale(1.1);
+}
+body .wrapper .main .bookItem p {
+  color: #999;
+  font-family: "Titillium Web";
+}
+body .wrapper .main .bookItem p:hover {
+  color: #ffffff;
+}
 
-    margin: 0 auto;
-}
-.date {
-    font-size: 14px;
-}
+/*# sourceMappingURL=style.css.map */
